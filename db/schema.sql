@@ -18,7 +18,7 @@ Create Table Product (
 );
 Create Table Tag(
     id int not null primary key auto_increment,
-    tag_name text 
+    tag_name text
 );
 Create Table ProductTag(
     id int not null primary key auto_increment,
