@@ -15,7 +15,7 @@ Product.init(
     product_name: {type: DataTypes.TEXT},
     price: {type: DataTypes.DECIMAL},
     stock: {type: DataTypes.INTEGER, defaultValue: 10},
-    category_id: {type:DataTypes.INTEGER, references: {model: Category, key: "id" }}
+    category_id: {type:DataTypes.INTEGER, references: {model: "Category", key: "id" }}
   },
   {
     sequelize,
