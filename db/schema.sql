@@ -14,7 +14,9 @@ Create Table Product (
     Product_Name text not null, 
     price decimal not null,
     stock int not null default(10),
-    category_id int references Category(id)
+    category_id int references Category(id) match simple on delete cascade
+
+
 );
 Create Table Tag(
     id int not null primary key auto_increment,
@@ -22,6 +24,9 @@ Create Table Tag(
 );
 Create Table ProductTag(
     id int not null primary key auto_increment,
-    product_id int references Product (id),
-    tag_id int references Tag (id)
+    product_id int references Product (id) match simple on delete cascade,
+
+    tag_id int references Tag (id) match simple on delete cascade
+
+
 );

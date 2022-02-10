@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
-  Category.findAll({
+  Tag.findAll({
     where: {
       id: req.params["id"]
     }
@@ -28,9 +28,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new tag
-  Category.create(req.body)
+  Tag.create(req.body)
   .then(() => {
-    res.sendStatus(200)
+    res.redirect("/api/tags")
   })
 });
 
@@ -44,7 +44,12 @@ router.put('/:id', (req, res) => {
     }
   })
   .then(() => {
-    res.sendStatus(200)
+    //res.redirect("/api/tags")
+    Tag.findAll()
+  .then(data => {
+    res.json(data);
+
+  })
   })
 });
 
@@ -57,7 +62,11 @@ router.delete('/:id', (req, res) => {
     }
   })
   .then(() => {
-    res.sendStatus(200)
+    Tag.findAll()
+    .then(data => {
+      res.json(data);
+  
+    })
   })
 });
 
