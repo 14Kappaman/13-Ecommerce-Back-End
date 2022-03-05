@@ -1,7 +1,7 @@
 # E-commerce Back End
 
-Place Picture Here
-Picture: ![Screenshot](https://github.com/14Kappaman/13-Ecommerce-Back-End/blob/master/Screenshot%202022-03-05%20180637.png?raw=true)
+
+![Screenshot](https://github.com/14Kappaman/13-Ecommerce-Back-End/blob/master/Screenshot%202022-03-05%20180637.png?raw=true)
 
 
 
