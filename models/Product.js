@@ -15,7 +15,7 @@ Product.init(
     product_name: {type: DataTypes.TEXT},
     price: {type: DataTypes.DECIMAL},
     stock: {type: DataTypes.INTEGER, defaultValue: 10},
-    category_id: {type:DataTypes.INTEGER, references: {model: "Category", key: "id" }, onDelete: "CASCADE"}
+    category_id: {type:DataTypes.INTEGER, references: {model: "Category", key: "id" }, onDelete: "cascade", hooks: true}
   },
   {
     sequelize,
